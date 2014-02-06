@@ -13,6 +13,7 @@
 package com.thjug.managedbean;
 
 import java.io.Serializable;
+import java.util.LinkedHashMap;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
 
@@ -21,22 +22,20 @@ import javax.faces.bean.RequestScoped;
  * @author nuboat
  */
 @RequestScoped
-@ManagedBean(name = "index")
-public class IndexManagedBean implements Serializable {
+@ManagedBean(name = "el")
+public class ElManagedBean implements Serializable {
+
 	private static final long serialVersionUID = 1L;
 
-	private String hello;
+	private final LinkedHashMap<Long, Long> map = new LinkedHashMap<>();
 
-	public IndexManagedBean() {
-		setHello("Hello World !");
+	public ElManagedBean() {
+		map.put(1L, 1L);
+		map.put(2L, 2L);
 	}
 
-	public String getHello() {
-		return hello;
+	public LinkedHashMap<Long, Long> getMap() {
+		return map;
 	}
-
-	public void setHello(final String hello) {
-		this.hello = hello;
-	}
-
+	
 }
