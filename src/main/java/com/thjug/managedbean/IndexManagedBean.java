@@ -22,7 +22,7 @@ import javax.faces.bean.RequestScoped;
  */
 @RequestScoped
 @ManagedBean(name = "index")
-public class IndexManagedBean implements Serializable {
+public final class IndexManagedBean implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	private String hello;

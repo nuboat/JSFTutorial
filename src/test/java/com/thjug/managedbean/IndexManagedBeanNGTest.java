@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
  *
  * @author nuboat
  */
-public class IndexManagedBeanNGTest {
+public final class IndexManagedBeanNGTest {
 
 	@Test
 	public void testGetHello() {
