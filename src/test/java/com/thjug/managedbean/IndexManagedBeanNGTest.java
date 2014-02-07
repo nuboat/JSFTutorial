@@ -12,31 +12,21 @@
  */
 package com.thjug.managedbean;
 
-import java.io.Serializable;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
+import static org.testng.Assert.*;
+import org.testng.annotations.Test;
 
 /**
  *
  * @author nuboat
  */
-@RequestScoped
-@ManagedBean(name = "index")
-public final class IndexManagedBean implements Serializable {
-	private static final long serialVersionUID = 1L;
+public final class IndexManagedBeanNGTest {
 
-	private String hello;
-
-	public IndexManagedBean() {
-		setHello("Hello World !");
-	}
-
-	public String getHello() {
-		return hello;
-	}
-
-	public void setHello(final String hello) {
-		this.hello = hello;
+	@Test
+	public void testGetHello() {
+		final IndexManagedBean instance = new IndexManagedBean();
+		final String expResult = "Hello World !";
+		final String result = instance.getHello();
+		assertEquals(result, expResult);
 	}
 
 }
