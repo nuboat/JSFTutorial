@@ -12,6 +12,8 @@
  */
 package com.thjug.managedbean;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
 
@@ -21,11 +23,16 @@ import org.testng.annotations.Test;
  */
 public final class IndexManagedBeanNGTest {
 
+	private static final Logger LOG = LoggerFactory.getLogger(IndexManagedBeanNGTest.class);
+
 	@Test
 	public void testGetHello() {
 		final IndexManagedBean instance = new IndexManagedBean();
 		final String expResult = "Hello World !";
 		final String result = instance.getHello();
+
+		LOG.debug(expResult);
+
 		assertEquals(result, expResult);
 	}
 
