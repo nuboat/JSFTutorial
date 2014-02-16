@@ -14,14 +14,14 @@
 
 	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
 		<encoder>
-			<Pattern>${PATTERN}</Pattern>
+			<pattern>${PATTERN}</pattern>
 		</encoder>
 	</appender>
 
 	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
 		<file>/Users/nuboat/Temp/logs/jsftutorial.log</file>
 		<encoder>
-			<Pattern>${PATTERN}</Pattern>
+			<pattern>${PATTERN}</pattern>
 			<!--immediateFlush>false</immediateFlush-->
 		</encoder>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
